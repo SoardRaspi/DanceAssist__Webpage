@@ -1,34 +1,34 @@
-const mediaSelector = document.getElementById("media");
+// const mediaSelector = document.getElementById("media");
 
 const webCamContainer = document.getElementById("web-cam-container");
 
-let selectedMedia = null;
+// let selectedMedia = null;
+const selectedMedia = "vid";
 
 // This array stores the recorded media data
 let chunks = [];
 
-// Handler function to handle the "change" event
-// when the user selects some option
-mediaSelector.addEventListener("change", (e) => {
+// // Handler function to handle the "change" event
+// // when the user selects some option
+// mediaSelector.addEventListener("change", (e) => {
 
-    // Takes the current value of the mediaSeletor
-    selectedMedia = e.target.value;
+//     // Takes the current value of the mediaSeletor
+//     selectedMedia = e.target.value;
 
-    document.getElementById(
-        `${selectedMedia}-recorder`)
-            .style.display = "block";
+//     document.getElementById(
+//         `${selectedMedia}-recorder`)
+//             .style.display = "block";
 
-    document.getElementById(
-            `${otherRecorderContainer(
-            selectedMedia)}-recorder`)
-        .style.display = "none";
-});
+//     document.getElementById(
+//             `${otherRecorderContainer(
+//             selectedMedia)}-recorder`)
+//         .style.display = "none";
+// });
 
 function otherRecorderContainer(
     selectedMedia) {
 
-    return selectedMedia === "vid" ? 
-        "aud" : "vid";
+    return selectedMedia === "vid" ? "aud" : "vid";
 }
 
 // This constraints object tells 
