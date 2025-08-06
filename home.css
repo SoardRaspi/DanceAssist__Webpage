@@ -8,6 +8,10 @@ body {
     display: none;
 }
 
+.display-always {
+    display: block;
+}
+
 .recording {
     color: red;
     background-color: rgb(241 211 211);
